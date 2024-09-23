@@ -1,0 +1,38 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Input electricity unit: ");
+int unit = int.Parse(Console.ReadLine());
+int total_amt =0 ;
+
+if (unit<= 20)
+{
+    total_amt = 100;
+}
+
+else if ((unit >= 21) && (unit <= 25))
+{
+    total_amt = 100 + (unit - 20) * 5;
+}
+
+else if ((unit > 25) && (unit <= 50))
+{
+    total_amt = 100 + 5*5 + (unit - 25) * 10;
+}
+
+else if (unit > 50)
+{
+    total_amt = 2000;
+}
+else
+{
+    Console.WriteLine("Invalid input");
+}
+
+Console.WriteLine("Total amount: " + total_amt);
+
+    }
+}
+
